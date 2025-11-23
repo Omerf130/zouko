@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import classes from "./page.module.scss";
 import VideoWithControls from "./components/VideoWithControls/VideoWithControls";
+import Link from "next/link";
+
 
 export const metadata: Metadata = {
   title: "Home | Zouko",
@@ -27,15 +29,17 @@ export default function HomePage() {
         </p>
 
         <div className={classes.links}>
-          <a href="/dance">&lt;&lt;&lt; לרקוד אתנו</a>
+          <Link className="navbar-link" href="/dance">
+            &lt;&lt;&lt; לרקוד אתנו
+          </Link>
 
-          <a href="/learn">
+          <Link className="navbar-link" href="/learn">
             ללמוד אתנו &gt;&gt;&gt;
             <span className={classes.dots}>
               <span></span>
               <span></span>
             </span>
-          </a>
+          </Link>
         </div>
       </section>
     </main>

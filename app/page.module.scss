@@ -1,4 +1,3 @@
-/* ====== ROOT WRAPPER ====== */
 .root {
   position: relative;
   width: 100%;
@@ -14,7 +13,6 @@
   }
 }
 
-/* ====== TWO SIDE-BY-SIDE VIDEOS ====== */
 .video {
   width: 100%;
   height: 100%;
@@ -27,7 +25,6 @@
   }
 }
 
-/* ====== OVERLAY SECTION ====== */
 .heroSection {
   position: absolute;
   inset: 0;
@@ -43,7 +40,6 @@
   z-index: 5;
 }
 
-/* ====== LOGO ====== */
 .logo {
   width: 260px;
   height: auto;
@@ -54,7 +50,6 @@
   }
 }
 
-/* ====== SUBTITLE ====== */
 .subtitle {
   font-size: 1.4rem;
   font-weight: 300;
@@ -65,7 +60,6 @@
   }
 }
 
-/* ====== BOTTOM LINKS ====== */
 .links {
   display: flex;
   gap: 40px;
@@ -92,7 +86,6 @@
   }
 }
 
-/* OPTIONAL animated dots (right link) */
 .dots {
   display: inline-flex;
   gap: 4px;
