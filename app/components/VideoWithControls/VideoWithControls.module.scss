@@ -6,9 +6,11 @@
 
 .video {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   filter: brightness(0.55);
+   @media (max-width: 768px) {
+    min-height: 92vh;
+  }
 }
 
 .playPause {
