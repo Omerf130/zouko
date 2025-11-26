@@ -1,32 +1,37 @@
-import VideoWithControls from "../components/VideoWithControls/VideoWithControls";
+import Image from "next/image";
 import classes from "./page.module.scss";
 import Link from "next/link";
+import { CONSTS } from "../_consts/consts";
 
 const page = () => {
+  const {HEADER, CONTENT1, CONTENT2, BUTTON} = CONSTS.ABOUT;
+
   return (
-    <main className={classes.root}>
-      <section className={classes.content}>
-        <div className={classes.headers}>
-        הפקות
+
+    <div className={classes.root}>
+      <div className={classes.header}>
+        <div className={classes.logoWrapper}>
+          <Image
+            className={classes.logo}
+            src="/logo/logo1.png"
+            alt="Logo"
+            width={150}
+            height={150}
+            unoptimized
+          />
         </div>
-        <div className={classes.media}>
-          <div className={classes.videoWrapper}>
-           <VideoWithControls src="/videos/vid1.mp4" />
-          </div>
-          <div className={classes.imageWrapper}>
-            <img src="/icons/icon6.png" alt="" />
-          </div>
-        </div>
-        <div className={classes.links}>
-          <Link className="navbar-link" href="/contact">
-            &lt;&lt;&lt; להרשמה
-          </Link>
-          <Link className="navbar-link" href="/about">
-            &lt;&lt;&lt; למידע נוסף
-          </Link>
-        </div>
-      </section>
-    </main>
+        <h1>{HEADER}</h1>
+      </div>
+      <div className={classes.content}>
+        <h2>{CONTENT1}</h2>
+        <h2>{CONTENT2}</h2>
+      </div>
+      <div className={classes.actions}>
+        <Link className="button-primary" href="/contact">
+          {BUTTON}
+        </Link>
+      </div>
+    </div>
   )
 }
 
