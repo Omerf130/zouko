@@ -1,66 +1,157 @@
+html,
+body {
+    overflow-y: visible;
+}
+
 .root {
     width: 100%;
     min-height: 100vh;
     padding: 40px 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-direction: column;
-    background-image: url("../../public/pics/pic1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    gap: 60px;
+    background: linear-gradient(to right,
+            #963517 0%,
+            #681913 30%,
+            #8c8972 70%,
+            #60584f 100%);
+    color: #fff;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-    }
 
-    .header {
-        width: fit-content;
-        color: #fff;
+    /* ---------------- TOP ---------------- */
+    .top {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 22px;
-        position: relative;
+        text-align: center;
+        gap: 20px;
 
-        .logowrapper {
-            .logo {
-                width: 150px;
-                height: 150px;
+        .header {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
 
+
+            .title {
+                position: absolute;
+                font-size: 2rem;
+                font-weight: bold;
+                top: 30px;
+                left: 120px;
             }
         }
 
-        h1 {
-            position: absolute;
-            bottom: -20px;
-            left: -60px;
-            color: #fff;
+        .content1,
+        .content2 {
+            max-width: 700px;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
-        h2 {
-            color: #fff;
-        }
-
     }
 
-    .content {
+    /* ---------------- MIDDLE ---------------- */
+    .middle {
         display: flex;
         flex-direction: column;
-        gap: 10px;
         align-items: center;
-        color: #fff;
-        z-index: 1;
+        gap: 30px;
+
+        .middleTitle {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+
+            .iconsTop {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 900px;
+                width: 100%;
+            }
+
+            .iconsBottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+                max-width: 900px;
+            }
+
+            .iconWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 150px;
+                gap: 10px;
+                text-align: center;
+
+                .text {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+
+                .image {
+                    border-radius: 12px;
+                }
+            }
+        }
     }
 
-    .actions {
-        .link {}
+    /* ---------------- BOTTOM ---------------- */
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 450px;
+            gap: 15px;
+
+            .bottomTitle {
+                text-decoration: underline;
+            }
+
+            .bottomText {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .middle {
+        .icons {
+            .iconsTop {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .iconsBottom {
+                flex-direction: column;
+                gap: 20px;
+
+            }
+        }
+    }
+    .bottom {
+        flex-direction: column;
     }
 }

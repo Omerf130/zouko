@@ -4,7 +4,7 @@ import Link from "next/link";
 import { CONSTS } from "../_consts/consts";
 
 const page = () => {
-  const {HEADER, CONTENT1, CONTENT2, BUTTON} = CONSTS.ABOUT;
+  const {HEADER, CONTENT1, CONTENT2, BUTTON} = CONSTS.PRODUCTION;
 
   return (
 
