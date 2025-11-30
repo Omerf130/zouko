@@ -11,6 +11,9 @@
     background-size: cover;
     background-position: center;
 
+    position: relative;      // REQUIRED for overlay
+    overflow: hidden;        // prevents scroll issues
+
     &::before {
         content: "";
         position: absolute;
@@ -19,6 +22,13 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
+        z-index: 1;          // overlay above background
+    }
+
+    // Everything inside MUST be above overlay
+    > * {
+        position: relative;
+        z-index: 2;
     }
 
     .header {
@@ -28,14 +38,13 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
         gap: 22px;
-        position: relative;
 
         .logowrapper {
             .logo {
                 width: 150px;
                 height: 150px;
-
             }
         }
 
@@ -45,10 +54,10 @@
             left: -60px;
             color: #fff;
         }
+
         h2 {
             color: #fff;
         }
-
     }
 
     .content {
@@ -57,7 +66,5 @@
         gap: 10px;
         align-items: center;
         color: #fff;
-        z-index: 1;
     }
-
 }
