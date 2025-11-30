@@ -17,7 +17,7 @@ const page = () => {
             alt="Logo"
             width={150}
             height={150}
-            unoptimized
+          unoptimized
           />
         </div>
         <h1>{HEADER}</h1>
