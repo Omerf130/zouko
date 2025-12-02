@@ -1,6 +1,12 @@
 import Link from "next/link";
 import classes from './page.module.scss'
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dance | Zouko",
+  description: "Dance studio – zouk, movement, classes and connection.",
+};
 
 const page = () => {
     return (

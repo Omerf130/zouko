@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import VideoWithControls from "../components/VideoWithControls/VideoWithControls";
 import classes from "./page.module.scss";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Others | Zouko",
+  description: "Dance studio – zouk, movement, classes and connection.",
+};
 
 const page = () => {
   return (

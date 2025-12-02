@@ -27,16 +27,12 @@ const MainPage = () => {
                 </p>
 
                 <div className={classes.links}>
-                    <Link className="navbar-link" href="/dance">
+                    <Link className="home-link" href="/dance">
                         &lt;&lt;&lt; לרקוד אתנו
                     </Link>
 
-                    <Link className="navbar-link" href="/learn">
+                    <Link className="home-link" href="/learn">
                         ללמוד אתנו &gt;&gt;&gt;
-                        <span className={classes.dots}>
-                            <span></span>
-                            <span></span>
-                        </span>
                     </Link>
                 </div>
             </section>

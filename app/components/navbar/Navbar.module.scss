@@ -1,9 +1,9 @@
 .navbar {
   width: 100%;
-  background-color: #336277d3;
+  background-color: #336277a3;
   border-bottom: 1px solid #e5e5e5;
-  position: relative;
   z-index: 9999;
+  position: fixed;
 
   .navbarInner {
     margin: 0 auto;
@@ -32,9 +32,14 @@
       text-decoration: none;
       color: #fff;
       font-weight: 500;
+      border: 1px solid #fff;
+      padding: 0.35rem 0.5rem;
+      border-radius: 8px;
+      transition: all 0.25s ease;
 
       &:hover {
-        text-decoration: underline;
+        background-color: #fff;
+        color: #336277d4;
       }
     }
   }
@@ -82,6 +87,7 @@
       color: #fff;
       font-size: 1.2rem;
       text-decoration: none;
+      transition: 0.25s ease;
 
       &:hover {
         text-decoration: underline;

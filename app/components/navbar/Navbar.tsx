@@ -56,7 +56,7 @@ export function Navbar() {
           <Link href="/production" onClick={() => setOpen(false)}>{PRODUCTIONS}</Link>
           <Link href="/otherStyless" onClick={() => setOpen(false)}>{OTHER_STYLES}</Link>
           <Link href="/about" onClick={() => setOpen(false)}>{ABOUT}</Link>
-          <Link href="/" onClick={() => setOpen(false)}><FaHome /></Link>
+          <Link href="/" onClick={() => setOpen(false)}><FaHome size={30} /></Link>
         </nav>
       )}
     </header>

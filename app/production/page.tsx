@@ -2,6 +2,12 @@ import Image from "next/image";
 import classes from "./page.module.scss";
 import Link from "next/link";
 import { CONSTS } from "../_consts/consts";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Productions | Zouko",
+  description: "Dance studio – zouk, movement, classes and connection.",
+};
 
 const page = () => {
   const {HEADER, CONTENT1, CONTENT2, BUTTON} = CONSTS.PRODUCTION;
